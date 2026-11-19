@@ -40,7 +40,7 @@ def judge_all(findings):
                 chunk = findings[s:s + 40]
                 for k, v in llm_judge(chunk).items(): llm[s + k] = v
         except Exception as e:
-            print("LLM judge failed, using heuristic:", e)
+            print("LLM judge has failed, using heuristic:", e)
     for i, f in enumerate(findings):
         j = llm.get(i) or heuristic(f)
         f["verdict"], f["confidence"], f["reason"] = j["verdict"], j["confidence"], j["reason"]

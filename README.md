@@ -9,7 +9,7 @@ Developers accidentally commit API keys and passwords, and employees paste custo
 1. **Ingests** a repository history, a chat-channel export (JSON), or plain text files.
 2. **Scans** with secret-detection patterns (AWS, GitHub, Slack, Stripe, Google keys, private keys, database URLs, JWTs, hardcoded passwords) and personal-data rules (credit cards with Luhn check, Aadhaar, PAN, SSN, phone numbers, emails).
 3. **Judges** every hit with an LLM to decide whether it is a real secret or a test placeholder. A built-in heuristic is used if no API key is set.
-4. **Assigns severity** from the secret type and how widely it was exposed (for example, posted in #general or committed to git history ranks higher).
+4. **Assigns severity** from the secret type and how widely it has been exposed (for example, posted in #general or committed to git history ranks higher).
 5. **Alerts the owner** for high and critical leaks.
 6. **Generates a remediation checklist** (rotate, purge, notify) for each leak.
 7. **Simulates remediation only after human approval.** Nothing real is changed.
