@@ -60,4 +60,4 @@ if __name__ == "__main__":
     os.makedirs("sample_data", exist_ok=True)
     for n, c in build().items():
         open(os.path.join("sample_data", n), "w", encoding="utf-8").write(c)
-    print("Wrote fake demo files to sample_data/ (do not commit this folder).")
+    print("Wrote a fake demo files to sample_data/ (do not commit this folder).")
